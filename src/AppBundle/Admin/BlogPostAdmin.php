@@ -30,6 +30,10 @@ class BlogPostAdmin extends Admin
 
     protected function configureListFields(ListMapper $listMapper)
     {
-        // ... configure $listMapper
+        $listMapper
+            ->addIdentifier('title')
+            ->add('draft')
+            ->add('createdAt')
+        ;
     }
 }
